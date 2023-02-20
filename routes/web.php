@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// student api
+
 Route::resource('/student',StudentController::class);
+
+// employee api
+
+Route::resource('/employee',EmployeeController::class);
